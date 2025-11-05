@@ -6,6 +6,7 @@ import 'package:meals_managment/widgets/category_grid_item.dart';
 
 class Categories extends StatelessWidget {
   const Categories({super.key});
+  
   void _selectedItem(BuildContext context, Category category) {
     final filterredMeals = dummyMeals
         .where((meal) => meal.categories.contains(category.id))
