@@ -6,7 +6,7 @@ import 'package:meals_managment/widgets/category_grid_item.dart';
 
 class Categories extends StatelessWidget {
   const Categories({super.key});
-  
+
   void _selectedItem(BuildContext context, Category category) {
     final filterredMeals = dummyMeals
         .where((meal) => meal.categories.contains(category.id))
@@ -22,7 +22,6 @@ class Categories extends StatelessWidget {
   @override
   Widget build(context) {
     return Scaffold(
-      appBar: AppBar(title: Text('choose your categories')),
       body: GridView(
         padding: EdgeInsets.all(20),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
